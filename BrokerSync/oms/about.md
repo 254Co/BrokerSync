@@ -1,4 +1,4 @@
-# Order Management System (OMS) Module: Detailed Description
+# Order Management System (OMS) Module
 
 The **Order Management System (OMS) Module** is the core component of BrokerSync, responsible for handling all aspects of order lifecycle management. It is designed to be robust, efficient, and scalable, ensuring that brokers can place, manage, and track orders on behalf of their clients with minimal latency and maximum accuracy.
 
