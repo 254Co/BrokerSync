@@ -1,18 +1,19 @@
-# Order Management System (OMS) Module
+# OMS - Order Management System Module
 
-The **Order Management System (OMS) Module** is the core component of BrokerSync, responsible for handling all aspects of order lifecycle management. It is designed to be robust, efficient, and scalable, ensuring that brokers can place, manage, and track orders on behalf of their clients with minimal latency and maximum accuracy.
+The **OMS Module** is the core component of BrokerSync, responsible for handling all aspects of order lifecycle management. It is designed to be robust, efficient, and scalable, ensuring that brokers can place, manage, and track orders on behalf of their clients with minimal latency and maximum accuracy.
 
 ## Key Responsibilities
 
 ### 1. Order Placement
-- Allows brokers to place different types of orders (e.g., market, limit, stop-loss) on behalf of clients.
-- Validates orders against market conditions, client portfolios, and internal risk controls before submission.
-- Supports bulk order placements and complex order types (e.g., bracket orders).
+- Allows brokers to place different types of orders on behalf of clients.
+- Validates orders against market conditions, client portfolios, and internal risk/credit controls before submission.
+- Supports bulk order placements and complex order types.
 
 ### 2. Order Matching
 - Matches incoming buy and sell orders using a sophisticated matching engine.
 - Ensures that orders are matched based on priority, price, and time of entry.
 - Implements price-time priority for fairness in trade execution.
+- Expand the matching engine to handle orders across multiple markets or exchanges, allowing for arbitrage opportunities
 
 ### 3. Order Execution
 - Once a match is found, executes the trade and updates the relevant order books.
@@ -35,7 +36,6 @@ The **Order Management System (OMS) Module** is the core component of BrokerSync
 - Stores all trade data for compliance and auditing purposes.
 
 ### 7. Risk Management Integration
-- Although the Compliance and Risk Management modules were removed, the OMS should still include basic risk checks (e.g., margin requirements) before order placement.
 - Ensures that the orders placed by brokers do not exceed the client’s available resources or breach internal risk controls.
 
 ### 8. Market Data Integration
@@ -116,12 +116,6 @@ The **Order Management System (OMS) Module** is the core component of BrokerSync
 ### 4. Trade Reporting
 - After the trade is executed, a detailed report is generated and stored.
 - The broker can access this report via the Reporting Module, which pulls data from the OMS.
-
-## Potential Enhancements
-
-- **Algorithmic Trading Support:** Extend the OMS to support algorithmic trading strategies where orders are automatically placed based on predefined algorithms.
-- **Advanced Order Types:** Introduce more complex order types like iceberg orders or trailing stops.
-- **Cross-Market Matching:** Expand the matching engine to handle orders across multiple markets or exchanges, allowing for arbitrage opportunities.
 
 ## Conclusion
 
