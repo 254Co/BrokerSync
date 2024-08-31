@@ -110,15 +110,15 @@ The documentation covers all aspects of BrokerSync’s development, from initial
 
 BrokerSync is a multi-tiered platform consisting of the following layers:
 
-- **Presentation Layer**: The frontend interface used by brokers and clients.
-- **Application Layer**: The backend logic that processes orders, manages CRM functions, and handles data analytics.
-- **Data Layer**: The database systems storing order data, client information, and historical market data.
-- **Integration Layer**: Third-party services and APIs for market data, compliance, and communication.
+- **Presentation Layer**: The frontend interface used by brokers, Jr. brokers and other assistants.
+- **Application Layer**: The backend logic that processes and matches orders, manages CRM functions, and handles analytics.
+- **Data Layer**: The database systems storing order data, client information, product lists and historical market data.
+- **Integration Layer**: Third-party services and APIs for extensability.
 
 #### Components Overview
 
 - **Frontend**:
-  - Built with a modern JavaScript framework (e.g., React, Angular, or Vue.js).
+  - Built with Apache Wicket.
   - Responsive design for use on desktops, tablets, and smartphones.
 
 - **Backend**:
@@ -142,7 +142,7 @@ BrokerSync is a multi-tiered platform consisting of the following layers:
 
 #### Data Flow
 
-- **Order Placement**: User submits an order via the frontend, which is processed by the backend and stored in the database. The order is then routed to the appropriate exchange or trading venue.
+- **Order Placement**: Broker submits a customer order via the frontend, which is processed by the backend and stored in the database. The order is then routed to the appropriate venue.
 - **Client Management**: Client data is captured during onboarding and managed through the CRM system, with data stored in a relational database.
 - **Analytics**: Real-time and historical data is processed and analyzed, with insights provided to users via dashboards and reports.
 
@@ -152,10 +152,10 @@ BrokerSync is a multi-tiered platform consisting of the following layers:
 
 #### Frontend
 
-- **Framework**: React (JavaScript) for building interactive user interfaces.
-- **Styling**: CSS3 with a preprocessor like SASS or LESS, and a component library like Material-UI or Bootstrap.
-- **State Management**: Redux or Context API for managing application state.
-- **Testing**: Jest and React Testing Library for unit testing.
+- **Framework**: Apache Wicket (Java) for building component-based web applications.
+- **Styling**: CSS3 with a preprocessor like SASS or LESS, and integration with Wicket's built-in CSS support for styling components.
+- **State Management**: Wicket's built-in component and model system for managing state across pages and components.
+- **Testing**: WicketTester for unit testing Wicket components and pages.
 
 #### Backend
 
