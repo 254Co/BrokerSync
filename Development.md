@@ -122,23 +122,18 @@ BrokerSync is a multi-tiered platform consisting of the following layers:
   - Responsive design for use on desktops, tablets, and smartphones.
 
 - **Backend**:
-  - RESTful API services developed using a robust backend framework (e.g., Spring Boot, Django, or Express).
-  - Microservices architecture for scalability and maintainability.
+  - RESTful API services developed using Spring Boot.
 
 - **Database**:
-  - Relational database (e.g., PostgreSQL or MySQL) for structured data.
-  - NoSQL database (e.g., MongoDB or Cassandra) for unstructured data.
-  - In-memory data store (e.g., Redis) for caching and quick access.
+  - Relational database (PostgreSQL) for structured data.
+  - NoSQL database (Cassandra) for unstructured data.
+  - In-memory data store (Local Redis) for caching and quick access.
 
 - **Third-Party Integrations**:
-  - Market data providers (e.g., Bloomberg, Reuters).
+  - Market data providers.
   - Compliance and KYC services.
-  - Email and messaging platforms (e.g., Twilio, SendGrid).
+  - Email and messaging platforms.
 
-- **DevOps**:
-  - Continuous Integration/Continuous Deployment (CI/CD) pipeline.
-  - Containerization with Docker and orchestration with Kubernetes.
-  - Monitoring with Prometheus and Grafana.
 
 #### Data Flow
 
@@ -160,20 +155,18 @@ BrokerSync is a multi-tiered platform consisting of the following layers:
 #### Backend
 
 - **Framework**: Spring Boot (Java) for building robust REST APIs.
-- **Microservices**: Decomposed architecture using Docker containers.
 - **Authentication**: OAuth2 or JWT for secure API access.
 - **Testing**: JUnit for unit tests, and Postman for API testing.
 
 #### Database
 
 - **Relational Database**: PostgreSQL for structured data such as orders, clients, and financial transactions.
-- **NoSQL Database**: MongoDB for handling unstructured data such as logs and audit trails.
-- **Caching**: Redis for session management and caching frequently accessed data.
+- **NoSQL Database**: Cassandra for handling unstructured data such as logs and audit trails.
+- **Caching**: Local Redis for session management and caching frequently accessed data.
 
 #### Third-Party Integrations
 
-- **Market Data**: Integration with financial data providers for real-time market updates.
-- **KYC/Compliance**: Integration with services like Onfido or ComplyAdvantage for client verification.
+- **Market Data**: Integration with data providers for real-time market updates.
 - **Messaging**: Integration with Twilio for SMS notifications and SendGrid for email communication.
 
 #### DevOps
@@ -189,9 +182,9 @@ BrokerSync is a multi-tiered platform consisting of the following layers:
 #### Order Management System (OMS)
 
 - **Real-Time Order Tracking**: Track the status of all orders, including pending, executed, and canceled orders.
-- **Advanced Order Types**: Support for market, limit, stop-loss, and trailing stop orders.
-- **Trade Execution & Routing**: Automatic routing to multiple exchanges with failover mechanisms.
-- **Position Management**: Monitor open positions, P&L, and margin requirements in real-time.
+- **Advanced Order Types**: Support for market, limit, and trailing orders.
+- **Trade Execution & Routing**: Automatic routing with failover mechanisms.
+- **Order Management**: Monitor open orders and market conditions in real-time.
 
 #### Customer Relationship Management (CRM)
 
@@ -201,43 +194,27 @@ BrokerSync is a multi-tiered platform consisting of the following layers:
 
 #### Data & Analytics
 
-- **Market Data Integration**: Access to real-time and historical market data for commodities.
-- **Customizable Dashboards**: User-configurable dashboards for displaying key metrics and analytics.
-- **Predictive Analytics**: AI-driven tools for price forecasting and client behavior analysis.
+- **Data Integration**: Access to real-time and historical data.
+- **Dynamic Dashboards**: Dynamic dashboards for displaying key metrics and analytics.
+- **Predictive Analytics**: AI-driven tools for client behavior analysis.
 
 #### Compliance & Reporting
 
-- **Regulatory Compliance**: Automated checks for compliance with regulations such as MiFID II and GDPR.
 - **Audit Trails**: Comprehensive logging of all activities for audit purposes.
-- **Regulatory Reporting**: Automated generation and submission of required regulatory reports.
-
-#### Risk Management
-
-- **Market & Credit Risk**: Real-time monitoring of market and credit risk exposures.
-- **Margin Management**: Automated margin calculations and alerts for margin calls.
-- **Risk Limits**: Define and enforce risk limits for clients and portfolios.
 
 #### User Management & Security
 
 - **Role-Based Access Control (RBAC)**: Granular access controls based on user roles.
-- **Multi-Factor Authentication (MFA)**: Enhanced security for sensitive operations.
 - **Audit & Monitoring**: Continuous monitoring of user activities for security and compliance.
 
 #### Integration & Extensibility
 
 - **API Access**: RESTful API for third-party integration and custom development.
-- **Third-Party Integrations**: Seamless integration with trading platforms and data providers.
+- **Third-Party Integrations**: Seamless integration with third party applications.
 - **Custom Workflows**: Ability to customize workflows to fit specific business needs.
-
-#### Client Portal
-
-- **Self-Service Portal**: Client-facing portal for portfolio management, order placement, and report access.
-- **Mobile App**: Mobile application for on-the-go access to the platform.
-- **Notifications & Alerts**: Real-time alerts for market events, order statuses, and more.
 
 #### Support & Maintenance
 
-- **Help Desk**: Integrated help desk for client support and issue tracking.
 - **Knowledge Base**: Online knowledge base with tutorials, FAQs, and documentation.
 - **System Monitoring**: Continuous monitoring of system health with automated alerts.
 
@@ -245,7 +222,7 @@ BrokerSync is a multi-tiered platform consisting of the following layers:
 
 - **Warehouse Receipts Management**: Track physical commodity holdings and warehouse receipts.
 - **Contract Management**: Manage commodity contracts, including futures, options, and physical delivery.
-- **Hedging Tools**: Built-in tools for managing price risk through hedging strategies.
+- **Hedging Tools**: Built-in tools for offering suggestions on managing price risk through hedging strategies.
 
 ---
 
