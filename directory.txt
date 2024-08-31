@@ -163,3 +163,12 @@ brokersync/
 ├── docs/
 │   ├── architecture/
 │   ├── api/
+│   ├── user-manual/
+│   └── readme.md
+│
+└── scripts/
+    ├── backup.sh
+    ├── restore.sh
+    ├── start.sh
+    └── stop.sh
+
