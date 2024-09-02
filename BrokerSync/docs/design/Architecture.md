@@ -62,12 +62,15 @@
     - Real-Time Updates: Provides real-time price updates to the system, publishing current assessed prices to the Product & Contract Management Module.
   
   Subcomponents:
-    - Price Calculator: Consumes data from the Order Book Updates Topic, calculates the current bid/ask spread, and determines the execution price for matched trades.
-    - Impact Analyzer: Assesses the potential market impact of large orders, adjusting the pricing model as needed to avoid significant price disruptions.
+    - Price Assessment Engine: Consumes data from the Order Book and Historical Trade Manager for the contract and related contracts and determines the assessed price for each contract.
   
-  Integration with Iceberg:
-    - Price History Table: An Iceberg table that stores historical price data, categorized by product, contract, delivery date, and vintage, providing a rich dataset for analyzing price trends and volatility.
+  Integration with Platform: 
 
+     - Inputs:
+        1.) Historical Trade Data from Historical Trade Manager.
+     - Exports:
+
+      
 ### Trade Execution Module
   
   Responsibilities:
