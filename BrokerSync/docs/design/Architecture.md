@@ -6,7 +6,7 @@
     - API for Querying Details: Provides an API or service that other modules can use to query product and contract details to ensure consistency across the system.
 
   Subcomponents:
-    - Product Catalog Service: Centralized service that manages the lifecycle of products, contracts, and associated attributes like delivery dates and vintages.
+    - Product Catalog Service: Centralized service that manages the lifecycle of products, contracts, and associated attributes like delivery dates and vintages. *** NEEDS LOGIC.
     - Contract Validation Engine: Validates incoming orders against the catalog to ensure they reference valid products and contracts before they are processed further.
     - Attribute Manager: Manages specific attributes such as delivery dates and vintages, ensuring that they are consistently applied across all modules.
 
@@ -58,9 +58,8 @@
  ### Price Discovery Module
    
   Responsibilities:
-    - Price Calculation: Calculates the best bid and ask prices for each product and contract based on the current state of the order books.
-    - Market Impact Assessment: Analyzes the impact of large orders on prices, adjusting algorithms to ensure fair pricing.
-    - Real-Time Updates: Provides real-time price updates to the system, publishing execution prices to the Matched Trades Topic.
+    - Price Calculation: Calculates the assesed/indicative price for each contract based on the current state of the order book and historical trades the contract and related or correlated contracts. 
+    - Real-Time Updates: Provides real-time price updates to the system, publishing current assessed prices to the Product & Contract Management Module.
   
   Subcomponents:
     - Price Calculator: Consumes data from the Order Book Updates Topic, calculates the current bid/ask spread, and determines the execution price for matched trades.
