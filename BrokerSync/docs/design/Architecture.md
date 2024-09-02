@@ -6,11 +6,12 @@
     - API for Querying Details: Provides an API or service that other modules can use to query product and contract details to ensure consistency across the system.
 
   Subcomponents:
+    - Manual Product Catalog Management: Provides backend processes for manually managing the product and contract catalog. This includes adding, updating, or removing products, contracts, delivery dates, and vintages. The component is designed to handle scenarios where automated data feeds may not capture all the necessary details or where human oversight is required to maintain data accuracy and completeness.
     - Product Catalog Service: Centralized service that manages the lifecycle of products, contracts, and associated attributes like delivery dates and vintages. *** NEEDS LOGIC.
     - Contract Validation Engine: Validates incoming orders against the catalog to ensure they reference valid products and contracts before they are processed further.
     - Attribute Manager: Manages specific attributes such as delivery dates and vintages, ensuring that they are consistently applied across all modules.
 
-  Integration with Iceberg:
+  Integration with Iceberg: ***MAY SWITCH TO PSQL
     - Product and Contract Table: An Iceberg table that stores all product, contract, delivery, and vintage details, ensuring the system can track changes over time and easily retrieve this information for processing and analysis.
 
 ### Order Intake Module
